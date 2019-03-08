@@ -29,6 +29,11 @@ app.get('/yo/:buddy',  (req, res) =>{
   res.send('<h1>Yo, ' + req.params.buddy + '!</h1>')
 })
 
+app.get('/test', (req, res) =>{
+  console.log("INFO: GET function on the '/test' page")
+  res.send("This is a test.")
+})
+
 // handle non-existant routes
 app.use((req, res, next) => {
   console.log("INFO: Page not found")
